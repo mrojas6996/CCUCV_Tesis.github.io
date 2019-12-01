@@ -1,0 +1,1 @@
+fotoCrt.blade.php

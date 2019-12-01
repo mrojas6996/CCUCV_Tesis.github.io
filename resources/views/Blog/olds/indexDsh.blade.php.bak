@@ -1,0 +1,49 @@
+@extends('DashPpal')
+
+@section('cont_InfoDsh_sup')
+
+<div><h2>Página de administración de entradas</h2> <br><br></div>
+
+<div>
+	<section id="principal">
+		<section id="contenido">
+			@foreach($articulos as $articulo)
+				<article>
+					<table class="table table-bordered table-striped">
+						<tr>
+							<td>
+								<h4>{{$articulo->titulo}}</h4>
+								<p>{!! $articulo->contenido !!}</p>
+								<p>
+									<small>Posted by
+										<b>{{$articulo->Autor->name}}</b> at
+										<b>{{$articulo->created_at}}</b>
+									</small>
+								</p>										
+							</td>
+							<td>
+	        					<a href="{{ route('blog.edit', $articulo->id) }}" class="btn btn-primary">Modificar</a>	
+	        					<br /><br />		        					
+				                <form action="{{ route('blog.destroy', $articulo->id) }}" method="post">
+									@csrf
+									@method('DELETE')
+				                  <button class="btn btn-danger" type="submit">Eliminar</button>
+				                </form>							
+							</td>
+						</tr>
+					</table>
+				</article>
+			@endforeach  					                  
+		</section>            
+
+		{{$articulos->links()}}
+
+	</section>
+</div>
+@endsection
+
+@section('cont_InfoDsh_dwn')
+	<a class="btn btn-primary" href="{{ route('blog.create') }}" role="button">CREAR ENTRADA</a>
+@endsection
+
+<!--extraído de codigojavalibre.com-->
