@@ -5,6 +5,6 @@
       <meta http-equiv = "refresh" content = "2; url = https://www.google.com" />
    </head>
    <body>
-      <p>Hello HTML5!</p>
+      <p>Hello HTML5!!</p>
    </body>
 </html>
