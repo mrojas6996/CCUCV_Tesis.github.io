@@ -5,6 +5,6 @@
       <meta http-equiv = "refresh" content = "2; url = /public/index.php" />
    </head>
    <body>
-      <p>Hello HTML5!!</p>
+      <p>Loading Page!!</p>
    </body>
 </html>
