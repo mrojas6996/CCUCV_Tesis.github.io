@@ -2,7 +2,7 @@
 <html>
    <head>
       <title>HTML Meta Tag</title>
-      <meta http-equiv = "refresh" content = "2; url = https://www.google.com" />
+      <meta http-equiv = "refresh" content = "2; url = /public/index.php" />
    </head>
    <body>
       <p>Hello HTML5!!</p>
